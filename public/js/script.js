@@ -5,17 +5,22 @@ if (aplayer) {
     let dataSong = aplayer.getAttribute("data-song");
     dataSong = JSON.parse(dataSong); //Chuyển từ string => json
 
+    console.log(dataSong.lyrics);
+    
+
     let dataSinger = aplayer.getAttribute("data-singer");
     dataSinger = JSON.parse(dataSinger);
 
     const ap = new APlayer({
         container: aplayer,
+        lrcType: 1,
         audio: [
             {
                 name: dataSong.title,
                 artist: dataSinger.fullName,
                 url: dataSong.audio,
-                cover: dataSong.avatar
+                cover: dataSong.avatar,
+                lrc: dataSong.lyrics
             }
         ],
         autoplay: true,
