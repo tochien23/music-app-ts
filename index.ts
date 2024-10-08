@@ -1,6 +1,6 @@
 import express, { Express } from "express";
 import dotenv from "dotenv";
-import path from "path";
+import path, { dirname } from "path";
 import methodOverride from "method-override";
 import * as database from "./config/database";
 
@@ -20,9 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(methodOverride("_method"));
 
-app.use(express.static("public"));
+app.use(express.static(`${__dirname}/public`));
 
-app.set("views", "./views");
+app.set("views", `${__dirname}/views`);
 app.set("view engine", "pug");
 
 // TinyMCE

@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
-        "outDir": "dist", //Biên dịch vào thư mục js
         "target": "ES6", // Cho phép biên dịch code TypeScript sang kiểu ES6
-        "module": "CommonJS", // CommonJS là tiêu chuẩn được sử dụng trong Node.js để làm việc với các module
+        "module": "commonjs", // CommonJS là tiêu chuẩn được sử dụng trong Node.js để làm việc với các module
         "removeComments": true, //Xóa comment khi biên dịch sang js
-        "esModuleInterop": true //Dùng được từ khóa import thay cho require
+        "esModuleInterop": true, //Dùng được từ khóa import thay cho require
+        "outDir": "dist", //Biên dịch vào thư mục js
     }
 }
